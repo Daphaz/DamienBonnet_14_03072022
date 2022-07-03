@@ -6,6 +6,9 @@
 # First install lerna globaly
 npm -g lerna
 
+# Bootstrap deps
+lerna bootstrap
+
 # Install deps
 npm install
 

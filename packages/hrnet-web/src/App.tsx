@@ -1,5 +1,11 @@
+import { Button } from '@daphaz/hrnet-ui';
+
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div>
+      <Button label='Test Me' />
+    </div>
+  );
 };
 
 export default App;

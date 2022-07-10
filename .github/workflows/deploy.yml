@@ -58,6 +58,8 @@ jobs:
 
       - name: 📥 Install lerna & Download deps
         run: npm i -g lerna@4.0.0 && lerna bootstrap
+        with:
+          node-version: 14
 
       - name: ⚡️ Build Api
         run: npm run build-api

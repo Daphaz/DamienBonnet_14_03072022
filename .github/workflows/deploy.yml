@@ -56,11 +56,16 @@ jobs:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v2
 
-      - name: 📥 Install lerna & Download deps
-        run: npm i && lerna bootstrap --no-ci
+      - name: ⎔ Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
 
-      - name: ⚡️ Build Api
-        run: npm run build-api
+      - name: ⚡️ Bootstrap deps & Build Api
+        run: |
+          npm i -g lerna@4.0.0
+          lerna bootstrap
+          npm run build-api
 
       - name: 🚀 Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action

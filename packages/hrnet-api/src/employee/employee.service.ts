@@ -1,6 +1,6 @@
 import { Employee } from '@prisma/client';
 import { CreateEmployeeDto } from './inputs';
-import prisma from 'src/lib/prisma/client';
+import { prisma } from '../lib/prisma';
 
 export const getAll = async (): Promise<Employee[]> => {
   return prisma.employee.findMany();

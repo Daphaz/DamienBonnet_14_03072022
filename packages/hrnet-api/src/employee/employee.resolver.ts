@@ -1,6 +1,6 @@
 import { GraphQLList, GraphQLNonNull } from 'graphql';
 import GqlEmployee from './employee.gql';
-import { IApolloServerContext } from 'src/lib/ts';
+import { IApolloServerContext } from '../lib/ts';
 import { create, getAll } from './employee.service';
 import { Employee } from '@prisma/client';
 import CreateEmployeeInput, {

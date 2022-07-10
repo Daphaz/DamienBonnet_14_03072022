@@ -1,5 +1,5 @@
 import context from './apollo-server-context';
-import schema from 'src/schema';
+import schema from '../../schema';
 
 const apolloServerConfig = {
   schema,

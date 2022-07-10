@@ -1,5 +1,5 @@
 import { GraphQLObjectType, GraphQLSchema } from 'graphql';
-import employeeResolver from 'src/employee/employee.resolver';
+import { employeeResolver } from './employee';
 
 const mutation = new GraphQLObjectType({
   name: 'Mutation',

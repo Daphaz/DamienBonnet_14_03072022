@@ -57,9 +57,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: 📥 Install lerna & Download deps
-        run: npm i -g lerna@4.0.0 && lerna bootstrap
-        with:
-          node-version: 14
+        run: npm i && lerna bootstrap --no-ci
 
       - name: ⚡️ Build Api
         run: npm run build-api

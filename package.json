@@ -10,6 +10,7 @@
 	"scripts": {
 		"dev": "lerna run dev --parallel --stream",
 		"build": "lerna run build --parallel --stream",
+		"build-api": "lerna run build-api --parallel --stream",
 		"lint:strict": "lerna run lint:strict --parallel --stream",
 		"lint:fix": "lerna run lint:fix --parallel --stream",
 		"typecheck": "lerna run typecheck --parallel --stream"

@@ -1,9 +1,7 @@
+import 'dotenv/config';
 import { ApolloServer } from 'apollo-server';
-import dotenv from 'dotenv-safe';
 import { performAstCodegen } from './codegen';
 import apolloServerConfig from './lib/config/apollo-server';
-
-dotenv.config();
 
 const startServer = () => {
   performAstCodegen();

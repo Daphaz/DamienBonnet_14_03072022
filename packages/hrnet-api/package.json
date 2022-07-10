@@ -1,9 +1,9 @@
 {
   "name": "hrnet-api",
   "version": "0.1.0",
-	"engines": {
+  "engines": {
     "node": "14.x",
-		"npm": "6.x"
+    "npm": "6.x"
   },
   "private": true,
   "description": "hrnet api for dev",
@@ -59,7 +59,7 @@
     "@graphql-codegen/schema-ast": "^2.5.0",
     "@prisma/client": "^4.0.0",
     "apollo-server": "^3.9.0",
-    "dotenv-safe": "^8.2.0",
+    "dotenv": "^16.0.1",
     "graphql": "^16.5.0",
     "graphql-iso-date": "^3.6.1"
   }

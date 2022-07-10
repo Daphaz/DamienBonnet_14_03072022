@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "name": "root",
+      "path": "."
+    },
+		{
+			"name": "Api",
+			"path": "packages/hrnet-api"
+		},
+		{
+			"name": "Web",
+			"path": "packages/hrnet-web"
+		}
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules/**": true,
+      "packages/*/*": true
+    }
+  }
+}

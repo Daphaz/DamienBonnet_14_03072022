@@ -66,6 +66,7 @@ jobs:
           npm i -g lerna@4.0.0
           lerna bootstrap
           npm run build-api
+          cp Procfile packages/hrnet-api/dist
 
       - name: 🚀 Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
@@ -74,7 +75,6 @@ jobs:
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           appdir: "packages/hrnet-api/dist"
-          procfile: "web: npm run prod"
         env:
           DATABASE_URL: ${{secrets.DATABASE_URL}}
           PORT: 8000

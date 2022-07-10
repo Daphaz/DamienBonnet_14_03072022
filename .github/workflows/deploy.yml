@@ -74,7 +74,7 @@ jobs:
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
           appdir: "packages/hrnet-api/dist"
-          procfile: "api: npm run prod"
+          procfile: "web: npm run prod"
         env:
           DATABASE_URL: ${{secrets.DATABASE_URL}}
           PORT: 8000

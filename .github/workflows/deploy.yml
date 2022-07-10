@@ -60,7 +60,7 @@ jobs:
         run: npm i -g lerna@4.0.0 && lerna bootstrap
 
       - name: ⚡️ Build Api
-      - run: npm run build-api
+        run: npm run build-api
 
       - name: 🚀 Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action

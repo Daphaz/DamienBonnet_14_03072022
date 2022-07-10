@@ -32,6 +32,14 @@ module.exports = {
       },
     ],
     'import/no-extraneous-dependencies': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'warn',
+      {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+      },
+    ],
   },
   settings: {
     'import/resolver': {

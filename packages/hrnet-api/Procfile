@@ -1,1 +1,1 @@
-web: ls && cd dist/ && node main.js
+web: cd packages/hrnet-api && ls && npm run prod

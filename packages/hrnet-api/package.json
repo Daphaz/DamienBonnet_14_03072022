@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "description": "hrnet api for dev",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "dev": "nodemon",
-    "prod": "node -r ts-node/register/transpile-only -r tsconfig-paths/register ./dist/src/index.js",
+    "prod": "node -r ts-node/register/transpile-only -r tsconfig-paths/register ./dist/src/main.js",
     "build": "tsc -p tsconfig.prod.json",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -15,10 +15,17 @@
     "lint:fix": "eslint src --fix && npm run format",
     "typecheck": "tsc --noEmit --incremental false",
     "format": "prettier -w .",
-    "format:check": "prettier -c ."
+    "format:check": "prettier -c .",
+    "generate": "graphql-codegen --config codegen.yml",
+    "prisma:migration": "npx prisma migrate dev --preview-feature",
+    "prisma:studio": "npx prisma studio"
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "2.8.0",
+    "@graphql-codegen/typescript": "2.7.1",
+    "@graphql-codegen/typescript-resolvers": "2.7.1",
     "@types/dotenv-safe": "^8.1.2",
+    "@types/graphql-iso-date": "^3.4.0",
     "@types/jest": "^28.1.4",
     "@types/node": "^18.0.3",
     "@typescript-eslint/eslint-plugin": "^5.30.5",
@@ -32,14 +39,23 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-promise": "^6.0.0",
     "jest": "^28.1.2",
+    "jest-mock-extended": "^2.0.4",
     "nodemon": "^2.0.19",
     "prettier": "^2.7.1",
+    "prisma": "^4.0.0",
     "ts-jest": "^28.0.5",
     "ts-node": "^10.8.2",
     "tsconfig-paths": "^4.0.0",
     "typescript": "^4.7.4"
   },
   "dependencies": {
-    "dotenv-safe": "^8.2.0"
+    "@graphql-codegen/core": "^2.6.0",
+    "@graphql-codegen/plugin-helpers": "^2.5.0",
+    "@graphql-codegen/schema-ast": "^2.5.0",
+    "@prisma/client": "^4.0.0",
+    "apollo-server": "^3.9.0",
+    "dotenv-safe": "^8.2.0",
+    "graphql": "^16.5.0",
+    "graphql-iso-date": "^3.6.1"
   }
 }

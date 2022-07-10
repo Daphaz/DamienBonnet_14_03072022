@@ -1,0 +1,78 @@
+type Query {
+  getAllEmployee: [Employee]
+}
+
+"""A employee"""
+type Employee {
+  """id of the employee"""
+  id: ID!
+
+  """firstname of the employee"""
+  firstname: String!
+
+  """lastname of the employee"""
+  lastname: String!
+
+  """birthday of the employee"""
+  birthday: Date!
+
+  """startDate of the employee"""
+  startDate: Date!
+
+  """street of the employee"""
+  street: String
+
+  """city of the employee"""
+  city: String
+
+  """state of the employee"""
+  state: String!
+
+  """zipCode of the employee"""
+  zipCode: Int
+
+  """department of the employee"""
+  department: String!
+}
+
+"""
+A date string, such as 2007-12-03, compliant with the `full-date` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.
+"""
+scalar Date
+
+type Mutation {
+  createEmployee(
+    """Employee input to be created"""
+    input: CreateEmployeeInput!
+  ): Employee
+}
+
+"""create employee input"""
+input CreateEmployeeInput {
+  """firstname of the employee"""
+  firstname: String!
+
+  """lastname of the employee"""
+  lastname: String!
+
+  """birthday of the employee"""
+  birthday: Date!
+
+  """startDate of the employee"""
+  startDate: Date!
+
+  """street of the employee"""
+  street: String
+
+  """city of the employee"""
+  city: String
+
+  """state of the employee"""
+  state: String!
+
+  """zipCode of the employee"""
+  zipCode: Int
+
+  """department of the employee"""
+  department: String!
+}

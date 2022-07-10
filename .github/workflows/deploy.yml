@@ -21,8 +21,8 @@ jobs:
         with:
           node-version: 14
 
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+      - name: 📥 Install lerna & Download deps
+        run: npm i -g lerna@4.0.0 && lerna bootstrap
 
       - name: 🔬 Lint
         run: npm run lint:strict
@@ -42,44 +42,24 @@ jobs:
         with:
           node-version: 14
 
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
+      - name: 📥 Install lerna & Download deps
+        run: npm i -g lerna@4.0.0 && lerna bootstrap
 
       - name: 🔎 Format check
         run: npm run format:check
 
-  test:
-    name: 🃏 Test
-    runs-on: ubuntu-latest
-    steps:
-      - name: 🛑 Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.9.1
-
-      - name: ⬇️ Checkout repo
-        uses: actions/checkout@v2
-
-      - name: ⎔ Setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
-
-      - name: 📥 Download deps
-        uses: bahmutov/npm-install@v1
-
-      - name: 🃏 Run jest
-        run: npm run test
   publish:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
-    needs: [test]
+    needs: [lint,prettier]
     steps:
       - name: ⬇️ Checkout repo
         uses: actions/checkout@v2
 
-      - name: 🔧 Install and config
-        run: npm i -g lerna@4.0.0
+      - name: 📥 Install lerna & Download deps
+        run: npm i -g lerna@4.0.0 && lerna bootstrap
 
-      - run: lerna bootstrap
+      - name: ⚡️ Build Api
       - run: npm run build-api
 
       - name: 🚀 Deploy to Heroku

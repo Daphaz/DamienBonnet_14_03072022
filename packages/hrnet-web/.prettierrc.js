@@ -1,5 +1,7 @@
+/** @type {import('prettier').Config} */
 module.exports = {
-  arrowParens: 'always',
+  tabWidth: 120,
+  arrowParens: 'avoid',
   singleQuote: true,
   jsxSingleQuote: true,
   tabWidth: 2,

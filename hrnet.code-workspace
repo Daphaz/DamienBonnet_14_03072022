@@ -17,6 +17,8 @@
     "files.exclude": {
       "**/node_modules/**": true,
       "packages/*/*": true
-    }
+		},
+		"typescript.tsdk": "Api/node_modules/typescript/lib",
+		"liveServer.settings.multiRootWorkspaceName": "root"
   }
 }

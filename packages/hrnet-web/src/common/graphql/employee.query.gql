@@ -1,0 +1,5 @@
+query GetAllEmployee {
+  getAllEmployee {
+    ...Employee
+  }
+}

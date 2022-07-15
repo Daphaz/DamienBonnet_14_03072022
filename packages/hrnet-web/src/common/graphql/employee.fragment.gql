@@ -1,0 +1,12 @@
+fragment Employee on Employee {
+  id
+  firstname
+  lastname
+  birthday
+  startDate
+  street
+  city
+  state
+  zipCode
+  department
+}

@@ -4,7 +4,7 @@
 ## Install
 ```sh
 # First install lerna globaly
-npm -g lerna
+npm -g lerna@4.0.0
 
 # Bootstrap deps
 lerna bootstrap

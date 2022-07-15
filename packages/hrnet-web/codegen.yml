@@ -1,0 +1,9 @@
+overwrite: true
+schema: ${REACT_APP_LOAD_SCHEMA}
+documents: "**/*.{gql,graphql}"
+generates:
+  src/common/ts/schema.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"

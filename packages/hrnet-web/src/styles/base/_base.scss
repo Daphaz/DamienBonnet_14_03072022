@@ -8,12 +8,10 @@ html {
   -moz-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  font-size: 10px;
 }
 
 body {
   font-family: $font-body;
-  font-size: 1.6rem;
   color: $clr-black;
   background-color: $clr-white;
 }

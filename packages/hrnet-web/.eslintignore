@@ -46,4 +46,5 @@ public/*
 
 # config
 src/react-app-env.d.ts
+src/react-table-config.d.ts
 codegen.yml

@@ -41,6 +41,7 @@ export const HomePage = () => {
             zipCode: Number(zipCode),
           },
         },
+        refetchQueries: ['GetAllEmployee'],
       });
 
       setOpenModal(true);
@@ -79,7 +80,7 @@ export const HomePage = () => {
             label='First Name'
             inputProps={{
               type: 'text',
-              id: 'input-firstname',
+              'aria-labelledby': 'firstname',
             }}
             classContainer={s.input}
           />
@@ -92,7 +93,7 @@ export const HomePage = () => {
             label='Last Name'
             inputProps={{
               type: 'text',
-              id: 'input-lastname',
+              'aria-labelledby': 'lastname',
             }}
             classContainer={s.input}
           />
@@ -107,7 +108,7 @@ export const HomePage = () => {
             label='Date of Birth'
             inputProps={{
               type: 'date',
-              id: 'input-birthday',
+              'aria-labelledby': 'birthday',
             }}
             classContainer={s.input}
           />
@@ -120,7 +121,7 @@ export const HomePage = () => {
             label='Start Date'
             inputProps={{
               type: 'date',
-              id: 'input-startdate',
+              'aria-labelledby': 'startDate',
             }}
             classContainer={s.input}
           />
@@ -134,7 +135,7 @@ export const HomePage = () => {
             label='Street'
             inputProps={{
               type: 'text',
-              id: 'input-street',
+              'aria-labelledby': 'street',
             }}
             classContainer={s.input}
           />
@@ -145,7 +146,7 @@ export const HomePage = () => {
             label='City'
             inputProps={{
               type: 'text',
-              id: 'input-city',
+              'aria-labelledby': 'city',
             }}
             classContainer={s.input}
           />
@@ -174,7 +175,7 @@ export const HomePage = () => {
             label='Zip Code'
             inputProps={{
               type: 'text',
-              id: 'input-zipcode',
+              'aria-labelledby': 'zipCode',
             }}
             classContainer={s.input}
           />

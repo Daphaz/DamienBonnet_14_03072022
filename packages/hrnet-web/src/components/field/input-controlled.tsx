@@ -37,7 +37,7 @@ export const InputControlled = <
       rules={rules}
       render={({ field, fieldState: { error } }) => {
         return (
-          <div className={s.block}>
+          <div className={s.block} id={name}>
             <span className={s.label}>{label}</span>
             <Input
               fullWidth

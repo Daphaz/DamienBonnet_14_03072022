@@ -12,6 +12,7 @@
 		"test": "lerna run test --stream",
 		"build": "lerna run build --parallel --stream",
 		"build-api": "lerna run build-api --parallel --stream",
+		"build-web": "lerna run build-web --parallel --stream",
 		"lint:strict": "lerna run lint:strict --parallel --stream",
 		"lint:fix": "lerna run lint:fix --parallel --stream",
 		"format:check": "lerna run format:check --parallel --stream",

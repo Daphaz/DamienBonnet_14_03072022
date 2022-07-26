@@ -33,6 +33,7 @@
   "scripts": {
     "dev": "craco start",
     "build": "craco build",
+    "build-web": "craco build",
     "test": "craco test",
     "eject": "craco eject",
     "lint:strict": "eslint --max-warnings=0 src",

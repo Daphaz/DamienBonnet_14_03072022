@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.6.9",
-    "@craco/craco": "^6.4.3",
+    "@craco/craco": "^7.0.0-alpha.0",
     "@daphaz/hrnet-ui": "^1.8.0",
     "@graphql-codegen/cli": "2.8.1",
     "@graphql-codegen/typescript": "2.7.1",

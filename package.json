@@ -1,12 +1,17 @@
 {
-	"name": "@hrnet/root",
+	"name": "hrnet-workspace",
 	"private": true,
 	"devDependencies": {
 		"lerna": "^4.0.0"
 	},
-	"workspaces": [
-		"packages/*"
-	],
+	"workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/hrnet-api"
+    ]
+  },
 	"scripts": {
 		"dev": "lerna run dev --parallel --stream",
 		"test": "lerna run test --stream",

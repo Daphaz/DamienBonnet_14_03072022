@@ -108,7 +108,7 @@
 
 .header {
   width: 100% !important;
-  margin-bottom: inherit auto 1.25rem !important;
+  margin: inherit auto 1.25rem !important;
 
   @include md {
     gap: 0.75rem;

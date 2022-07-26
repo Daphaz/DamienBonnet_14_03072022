@@ -58,7 +58,7 @@ export const EmployeePage = () => {
 
   if (loading || !data?.getAllEmployee) {
     return (
-      <Container className={s.spinnerContainer}>
+      <Container display='flex' justify='center' alignItems='center'>
         <Spinner color='primary' />
       </Container>
     );

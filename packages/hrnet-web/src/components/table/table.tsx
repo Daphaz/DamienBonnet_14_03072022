@@ -38,7 +38,14 @@ export const Table: FC<TableProps> = ({ columns, data }) => {
 
   return (
     <div className={s.root}>
-      <Container fluid wrap='wrap' className={s.header}>
+      <Container
+        display='flex'
+        justify='space_between'
+        alignItems='center'
+        fluid
+        wrap='wrap'
+        className={s.header}
+      >
         <Dropdown
           classContainer={clsx(s.dropDown, s.full)}
           options={[

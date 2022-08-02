@@ -3,7 +3,7 @@
 this is the first hrnet api for manage employees
 
 ## Installation
-Install the project with [lerna]("../../README.md")
+Install the project with lerna see the README.md in the root folder
 
 For this project you need [postgresql]('https://www.postgresql.org/download/') installed in local.
 
